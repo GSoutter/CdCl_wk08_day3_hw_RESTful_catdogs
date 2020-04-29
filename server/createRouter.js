@@ -16,6 +16,16 @@ const createRouter = function(data) {
   router.post('/', function(req, res){
     data.push(req.body);
     res.json(data);
+  });
+
+  router.put('/:id', function(req, res){
+    data[req.params.id] = req.body
+    res.json(data)
+  })
+
+  router.delete('/:id', function(req, res){
+    data.splice(req.params.id, 1);
+    res.json(data);
   })
 
 

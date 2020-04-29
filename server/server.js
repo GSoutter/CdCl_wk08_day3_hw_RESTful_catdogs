@@ -16,9 +16,20 @@ const dogs = [
   { name: "Luna", breed: "Husky" }
 ];
 
+const cats = [
+  { name: "Tiddles", breed: "Siberian" },
+  { name: "Patch", breed: "Bengal" },
+  { name: "Socks", breed: "British Shorthair" },
+  { name: "Mr Bigglesworth", breed: "Persian" },
+  { name: "Monty", breed: "Maine Coon" }
+]
+
 
 const dogsRouter = createRouter(dogs);
 app.use('/api/dogs/', dogsRouter);
+
+const catsRouter = createRouter(cats);
+app.use('/api/cats/', catsRouter);
 
 
 app.listen(3000, function () {
